@@ -1,2 +1,6 @@
+# Binaries
 /target
+# Dependencies
 Cargo.lock
+# Config
+.vscode
