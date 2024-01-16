@@ -2,12 +2,10 @@
 name = "curt_os"
 version = "0.1.0"
 edition = "2018"
-authors = ["Curtis Wilson <ten_sword@proton."]
+authors = ["Curtis Wilson <ten_sword@proton.me>"]
 
-# the profile used for `cargo build`
-[profile.dev]
-panic = "abort" # disable stack unwinding on panic
+[dependencies]
+bootloader = "0.9.23"
 
-# the profile used for `cargo build --release`
-[profile.release]
-panic = "abort" # disable stack unwinding on panic
+[package.metadata.bootimage]
+run-command = ['C:\Program Files\qemu\qemu-system-x86_64', "-drive", "format=raw,file={}"]
