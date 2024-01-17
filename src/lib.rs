@@ -1,14 +1,16 @@
 #![cfg_attr(test, no_main)]
-#![feature(custom_test_frameworks)]
 #![feature(abi_x86_interrupt)]
+#![feature(custom_test_frameworks)]
 #![no_std]
 #![reexport_test_harness_main = "test_main"]
 #![test_runner(crate::test_runner)]
 
 use core::panic::PanicInfo;
+
+pub mod gdt;
+pub mod interrupts;
 pub mod serial;
 pub mod vga_buffer;
-pub mod interrupts;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[repr(u32)]
@@ -18,6 +20,7 @@ pub enum QemuExitCode {
 }
 
 pub fn init() {
+  gdt::init();
   interrupts::init_idt();
 }
 

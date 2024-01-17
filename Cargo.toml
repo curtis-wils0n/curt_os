@@ -14,12 +14,17 @@ x86_64 = "0.14.2"
 version = "1.0"
 features = ["spin_no_std"]
 
+# boot config
 [package.metadata.bootimage]
 run-command = ['C:\Program Files\qemu\qemu-system-x86_64', "-drive", "format=raw,file={}"]
 test-args = ["-device", "isa-debug-exit,iobase=0xf4,iosize=0x04", "-serial", "stdio", "-display", "none"]
 test-success-exit-code = 33 # (0x10 << 1) | 1
 test-timeout = 300
 
+# test config
 [[test]]
 name = "should_panic"
+harness = false
+[[test]]
+name = "stack_overflow"
 harness = false
