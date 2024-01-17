@@ -24,14 +24,14 @@ pub extern "C" fn _start() -> ! {
   test_main();
 
   println!("It did not crash!");
-  loop {}
+  curt_os::hlt_loop();
 }
 
 #[cfg(not(test))]
 #[panic_handler]
 fn panic(info: &PanicInfo) -> ! {
   println!("{}", info);
-  loop {}
+  curt_os::hlt_loop();
 }
 
 #[cfg(test)]
