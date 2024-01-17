@@ -2,7 +2,7 @@
 
 Based on the tutorial 'Writing an OS in Rust' by Philipp Oppermann [(link)](https://os.phil-opp.com/)
 
-![Screenshot of a QEMU VGA screen showing 'Hello World!'](https://github.com/curtis-wils0n/curt_os/assets/60797928/098a108f-a4f0-414a-8aac-c7d39a487bcd)
+![Screenshot of a QEMU VGA screen showing the curtOS splash screen](https://github.com/curtis-wils0n/curt_os/assets/60797928/721211e7-a531-403d-8525-ff25b9296c1f)
 
 curtOS is a simple x86-based operating system written in Rust and named after the nerd who wrote it.
 
