@@ -11,9 +11,9 @@ use curt_os::println;
 pub extern "C" fn _start() -> ! {
   println!("                   __  ____  _____  ");
   println!("  _______  _______/ /_/ __ \\/ ___/  ");
-  println!(" / ___/ / / / ___/ __/ / / /\\__ \\   ");
+  println!(" / ___  / / / ___  __/ / / /\\__ \\   ");
   println!("/ /__/ /_/ / /  / /_/ /_/ /___/ /   ");
-  println!("\\___/\\__,_/_/   \\__/\\____//____/  ");
+  println!("\\___/\\__,_/_/   \\__/\\__________/  ");
   println!("");
   println!("A Rust-Based Operating System for x86 architecture");
   println!("Written by Curtis Wilson");
