@@ -9,7 +9,15 @@ use curt_os::println;
 
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
-  println!("Hello World{}", "!");
+  println!("                   __  ____  _____  ");
+  println!("  _______  _______/ /_/ __ \\/ ___/  ");
+  println!(" / ___/ / / / ___/ __/ / / /\\__ \\   ");
+  println!("/ /__/ /_/ / /  / /_/ /_/ /___/ /   ");
+  println!("\\___/\\__,_/_/   \\__/\\____//____/  ");
+  println!("");
+  println!("A Rust-Based Operating System for x86 architecture");
+  println!("Written by Curtis Wilson");
+  println!("Based on the tutorial by Philipp Oppermann");
 
   curt_os::init();
 
@@ -23,7 +31,6 @@ pub extern "C" fn _start() -> ! {
   #[cfg(test)]
   test_main();
 
-  println!("It did not crash!");
   curt_os::hlt_loop();
 }
 
